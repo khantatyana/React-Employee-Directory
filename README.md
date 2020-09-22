@@ -1,8 +1,23 @@
 # React-Employee-Directory
 
+[![Build Status](https://img.shields.io/badge/Project%20title-React--Employee--Directory-yellow)](https://img.shields.io/badge/Project%20title-React--Employee--Directory-yellow)
+
+[Deployed Page](https://khantatyana.github.io/React-Employee-Directory/)
+
+React application which UI is broken into components, it manages component state, and responds to user events.
+
+![Image](./public/empDir.png)
+
 ## Overview
 
-For this assignment, you'll create a employee directory with React. This assignment will require you to break up your application's UI into components, manage component state, and respond to user events.
+Given a table of random employees, when the user loads the page, a table of employees renders. 
+
+The user is able to:
+
+  * Sort the table by at least one category
+
+  * Search(Filter) the users by first or last name.
+  
 
 ## User Story
 
@@ -11,13 +26,3 @@ For this assignment, you'll create a employee directory with React. This assignm
 ## Business Context
 
 An employee or manager would benefit greatly from being able to view non-sensitive data about other employees. It would be particularly helpful to be able to filter employees by name.
-
-## Acceptance Criteria
-
-Given a table of random users, when the user loads the page, a table of employees should render. 
-
-The user should be able to:
-
-  * Sort the table by at least one category
-
-  * Filter the users by at least one property.

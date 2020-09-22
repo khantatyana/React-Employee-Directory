@@ -3,7 +3,7 @@ import React from 'react'
 function EmployeeTableBody({ employees }) {
     console.log(employees);
     return (
-        <tbody>
+        <tbody style={{width: "115%"}}>
             { employees[0] !== undefined && employees[0].name !== undefined ? (
                 employees.map(({ id, picture, name, dob, phone, email, location }) => {
                     return (
