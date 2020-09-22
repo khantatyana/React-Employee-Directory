@@ -6,20 +6,21 @@ import Card from "./Card";
 import SearchForm from "./SearchForm";
 import EmployeeDetail from "./EmployeeDetail";
 import API from "../utils/API";
+import Header from "./Header";
 import Footer from "./Footer";
-
 
 class OmdbContainer extends Component {
   state = {
     employees: [{}],
-    filteredEmployees: [{}]
+    filteredEmployees: [{}],
+    sortedEmployees: [{}]
   };
 
   componentDidMount() {
     API.search()
       .then(res => {
 
-        this.setState({ employees: res.data.results, filteredEmployees: res.data.results });
+        this.setState({ employees: res.data.results, filteredEmployees: res.data.results, sortedEmployees: res.data.results });
         console.log(this.state.employees);
       }
       )
@@ -35,9 +36,18 @@ class OmdbContainer extends Component {
     this.setState({filteredEmployees: filteredList});
   };
 
+  handleOnClick = event => {
+    let sortedList = this.state.employees.sort((a, b) => {
+      return a - b;
+    })
+
+    this.setState({sortedEmployees: sortedList});
+}
   render() {
     return (
+      
       <Container >
+        <Header></Header>
         <Row>
         <Col size="md-3">
             <Card heading="Search by name">
@@ -49,6 +59,7 @@ class OmdbContainer extends Component {
           <Col size="md-9">
             <EmployeeDetail
               employees = {this.state.filteredEmployees}
+              handleOnClick={this.state.handleOnClick}
               />
           </Col>
           
