@@ -12,12 +12,12 @@ function EmployeeDetail({employees}, {handleOnClick}) {
                 <tr className="gradient" >
                     <th># ID</th>
                     <th >Picture</th>
-                    <th fieldname="name.first" handleOnClick={handleOnClick}>First Name</th>
-                    <th fieldname="name.last" handleOnClick={handleOnClick}>Last Name</th>
-                    <th fieldname="dob.age" handleOnClick={handleOnClick}>Age</th>
-                    <th fieldname="phone" handleOnClick={handleOnClick}>Phone number</th>
-                    <th fieldname="email" handleOnClick={handleOnClick}>Email</th>
-                    <th fieldname="location.country" handleOnClick={handleOnClick}>Country</th>
+                    <th fieldname="name.first" onClick={handleOnClick}>First Name</th>
+                    <th fieldname="name.last" onClick={handleOnClick}>Last Name</th>
+                    <th fieldname="dob.age" onClick={handleOnClick}>Age</th>
+                    <th fieldname="phone" onClick={handleOnClick}>Phone number</th>
+                    <th fieldname="email" onClick={handleOnClick}>Email</th>
+                    <th fieldname="location.country" onClick={handleOnClick}>Country</th>
                 </tr>
             </thead>
             <EmployeeTableBody employees={employees} />
