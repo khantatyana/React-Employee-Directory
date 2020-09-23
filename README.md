@@ -2,7 +2,7 @@
 
 [![Build Status](https://img.shields.io/badge/Project%20title-React--Employee--Directory-yellow)](https://img.shields.io/badge/Project%20title-React--Employee--Directory-yellow)
 
-[Deployed Page](https://react-employee-directory-new.herokuapp.com/)
+[Heroku Page](https://react-employee-directory-new.herokuapp.com/)
 
 React application which UI is broken into components, it manages component state, and responds to user events.
 
