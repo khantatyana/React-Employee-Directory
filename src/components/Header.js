@@ -4,7 +4,7 @@ function Header() {
   return (
     <header className="header">
         <h1 class="gradient" style={{ 
-          textAlign: "center", 
+          textAlign: "left", 
           // backgroundImage: "linear-gradient(120deg,pink,blue)", 
           width: "115%"
   
