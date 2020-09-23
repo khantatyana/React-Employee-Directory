@@ -1,18 +1,15 @@
 import React from "react";
 import EmployeeTableBody from "./EmployeeTableBody";
 import { Table } from "react-bootstrap";
+import "./style.css";
 
 function EmployeeDetail({employees}, {handleOnClick}) {
 
     return (
         
         <Table striped bordered hover size="sm" >
-            <thead >
-                <tr style={{
-                    backgroundImage: "linear-gradient(120deg,#448877,#fbc531)", 
-                    position: "-webkit-sticky",
-                    position: "sticky",
-                    top: "0"}}>
+            <thead className="tableHeader">
+                <tr className="gradient" >
                     <th># ID</th>
                     <th >Picture</th>
                     <th handleOnClick={handleOnClick}>First Name</th>

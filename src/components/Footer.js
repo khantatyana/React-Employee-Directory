@@ -3,8 +3,8 @@ import "./style.css";
 
 function Footer() {
   return (
-    <footer className="footer">
-      <span>@Employee Directory 2020</span>
+    <footer className="footer gradient">
+      <span className="gradient">@Employee Directory 2020</span>
     </footer>
   );
 }
