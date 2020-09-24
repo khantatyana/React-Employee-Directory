@@ -10,21 +10,17 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 class OmdbContainer extends Component {
-  constructor(props) {
-    super(props);
-    this.handleOnClick = this.handleOnClick.bind(this);
-  }
+
   state = {
     employees: [{}],
-    filteredEmployees: [{}],
-    sortedEmployees: [{}]
+    filteredEmployees: [{}]
   };
 
   componentDidMount() {
     API.search()
       .then(res => {
 
-        this.setState({ employees: res.data.results, filteredEmployees: res.data.results, sortedEmployees: res.data.results });
+        this.setState({ employees: res.data.results, filteredEmployees: res.data.results });
         console.log(this.state.employees);
       }
       )
@@ -41,21 +37,23 @@ class OmdbContainer extends Component {
   };
 
   handleOnClick = event => {
+
     console.log("clicked");
     let sorting = event.target.getAttribute("fieldname");
     let properties = Array.isArray(sorting) ? sorting : sorting.split(".")
 
-    let sortedList = [].concat(this.state.employees);
+    let sortedList = this.state.employees;
     sortedList = sortedList.sort((a, b) => {
-      let aVal = properties.reduce((prev, curr) => prev && prev[curr], a);
-      let bVal = properties.reduce((prev, curr) => prev && prev[curr], b);
-      if(aVal < bVal) { return -1; }
-      if(aVal > bVal) { return 1; }
+      let aValue = properties.reduce((previous, current) => previous && previous[current], a);
+      let bValue = properties.reduce((previous, current) => previous && previous[current], b);
+      if(aValue < bValue) { return -1; }
+      if(aValue > bValue) { return 1; }
       return 0;
     })
 
-    this.setState({sortedEmployees: sortedList});
-}
+    this.setState({filteredEmployees: sortedList});
+
+  }
   render() {
     return (
       
@@ -72,7 +70,7 @@ class OmdbContainer extends Component {
           <Col size="md-9">
             <EmployeeDetail
               employees = {this.state.filteredEmployees}
-              handleOnClick={this.state.handleOnClick}
+              handleOnClick={this.handleOnClick}
               />
           </Col>
           

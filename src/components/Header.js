@@ -6,7 +6,7 @@ function Header() {
         <h1 className="gradient" style={{ 
           textAlign: "left", 
           // backgroundImage: "linear-gradient(120deg,pink,blue)", 
-          width: "115%"
+          width: "120%"
   
           }}>Employee Directory</h1>
       </header>

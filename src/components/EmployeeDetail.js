@@ -3,7 +3,7 @@ import EmployeeTableBody from "./EmployeeTableBody";
 import { Table } from "react-bootstrap";
 import "./style.css";
 
-function EmployeeDetail({employees}, {handleOnClick}) {
+function EmployeeDetail({employees, handleOnClick}) {
 
     return (
         
