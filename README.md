@@ -6,7 +6,7 @@
 
 React application which UI is broken into components, it manages component state, and responds to user events.
 
-![Image](./public/empDir.png)
+![Image](./public/empDir1.png)
 
 ## Overview
 
